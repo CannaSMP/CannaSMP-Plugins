@@ -1,0 +1,14 @@
+name: CannaSMPShardLeaderboard
+version: 1.0.0
+main: net.cannasmp.shardleaderboard.CannaSMPShardLeaderboardPlugin
+api-version: '1.21'
+depend:
+  - Skript
+commands:
+  shardlb:
+    description: Refresh the AFK shard leaderboard.
+    usage: /shardlb reload
+    permission: cannasmp.shardlb.admin
+permissions:
+  cannasmp.shardlb.admin:
+    default: op

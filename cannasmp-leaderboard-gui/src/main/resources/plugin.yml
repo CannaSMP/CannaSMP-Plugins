@@ -1,0 +1,15 @@
+name: CannaSMPLeaderboardGUI
+version: 1.0.0
+main: net.cannasmp.leaderboardgui.CannaSMPLeaderboardGUIPlugin
+api-version: '1.21'
+depend:
+  - PlaceholderAPI
+  - ajLeaderboards
+commands:
+  leaderboard:
+    description: Open the CannaSMP leaderboards menu.
+    usage: /leaderboard
+    aliases:
+      - leaderborad
+      - leaderboards
+      - lbs

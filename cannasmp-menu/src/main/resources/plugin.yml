@@ -1,0 +1,11 @@
+name: CannaSMPMenu
+version: 1.0.0
+main: net.cannasmp.menu.CannaSMPMenuPlugin
+api-version: '1.21'
+commands:
+  menu:
+    description: Open the CannaSMP player menu.
+    usage: /menu
+    aliases:
+      - helpmenu
+      - playermenu

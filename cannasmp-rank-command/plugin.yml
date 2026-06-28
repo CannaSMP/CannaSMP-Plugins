@@ -1,0 +1,10 @@
+name: CannaSMPRankCommand
+version: 1.3.0
+main: me.cannasmp.discordrank.CannaSmpRankCommandPlugin
+api-version: '1.21'
+depend:
+  - CannaSMPDiscordBridge
+commands:
+  rank:
+    description: Manage CannaSMP ranks and Discord rank mappings.
+    usage: /rank <player|create|remove|removeid|list|enable|disable>

@@ -1,0 +1,11 @@
+name: CannaSMPAfkWorld
+version: 1.0.0
+main: net.cannasmp.afkworld.CannaSMPAfkWorldPlugin
+api-version: '1.21'
+softdepend:
+  - PlaceholderAPI
+  - Skript
+commands:
+  afk:
+    description: Teleport to the AFK world after a short delay.
+    usage: /afk

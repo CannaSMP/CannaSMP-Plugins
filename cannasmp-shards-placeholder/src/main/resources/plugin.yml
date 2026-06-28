@@ -1,0 +1,7 @@
+name: CannaSMPShardsPlaceholder
+version: 1.0.0
+main: net.cannasmp.shardsplaceholder.CannaSMPShardsPlaceholderPlugin
+api-version: '1.21'
+depend:
+  - PlaceholderAPI
+  - Skript

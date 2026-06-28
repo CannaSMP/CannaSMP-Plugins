@@ -1,0 +1,12 @@
+name: CannaSMPConsent
+version: 1.0.0
+main: net.cannasmp.consent.CannaSMPConsentPlugin
+api-version: '1.21'
+commands:
+  cannaconsent:
+    description: Manage CannaSMP notice consent records.
+    usage: /cannaconsent <reset|status> <player>
+    permission: cannasmp.consent.admin
+permissions:
+  cannasmp.consent.admin:
+    default: op

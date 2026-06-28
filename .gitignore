@@ -1,0 +1,24 @@
+# Build outputs
+build/
+target/
+out/
+*.class
+*.jar
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Local/server configs and secrets
+plugins/
+config/
+*.log
+*.bak
+*.bak-*
+server-access.txt
+*.env
+
+# OS junk
+Thumbs.db
+Desktop.ini

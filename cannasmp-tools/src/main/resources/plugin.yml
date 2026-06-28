@@ -1,0 +1,34 @@
+name: CannaSMPTools
+version: 1.0.0
+main: net.cannasmp.tools.CannaSMPToolsPlugin
+api-version: '1.21'
+softdepend:
+  - PlaceholderAPI
+commands:
+  joke:
+    description: Shows, submits, and moderates CannaSMP jokes.
+    usage: /joke [submit|approve|deny|pending|reload]
+  jokeadd:
+    description: Staff command to add a joke directly.
+    usage: /jokeadd <joke>
+  jokeremove:
+    description: Staff command to remove an approved joke.
+    usage: /jokeremove <id>
+  jokelist:
+    description: Staff command to list approved jokes.
+    usage: /jokelist
+  jokepending:
+    description: Staff command to list pending jokes.
+    usage: /jokepending
+  clearchat:
+    description: Clears public chat.
+    usage: /clearchat
+    aliases: [cc]
+  canntools:
+    description: Reload CannaSMP tools.
+    usage: /canntools reload
+permissions:
+  cannasmp.tools.staff:
+    default: op
+  cannasmp.tools.clearchat:
+    default: op

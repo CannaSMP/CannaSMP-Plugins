@@ -1,0 +1,62 @@
+webhook:
+  joke-submissions: "PUT_JOKE_SUBMISSIONS_WEBHOOK_HERE"
+  username: "CannaSMP Joke Box"
+  avatar-url: ""
+
+chat-filter:
+  enabled: true
+  bypass-permission: "cannasmp.tools.staff"
+  blocked-message: "&cCannaSMP &8> &cKeep chat clean."
+  filter-commands: true
+  command-message: "&cCannaSMP &8> &cYou cannot use blocked words in commands."
+  checked-command-prefixes:
+    - /msg
+    - /m
+    - /tell
+    - /t
+    - /w
+    - /whisper
+    - /r
+    - /reply
+    - /mail
+    - /me
+    - /nick
+    - /nickname
+    - /ah
+    - /auctionhouse
+    - /pay
+    - /broadcast
+    - /bc
+  blocked-words:
+    - fuck
+    - shit
+    - bitch
+    - cunt
+    - nigger
+    - nigga
+    - faggot
+    - retard
+    - kike
+    - spic
+    - chink
+
+emojis:
+  ":sob:": "😭"
+  ":skull:": "☠"
+  ":skull_crossbones:": "☠"
+  ":heart:": "❤"
+  ":fire:": "🔥"
+  ":star:": "★"
+  ":weed:": "🍃"
+  ":leaf:": "🍃"
+  ":check:": "✔"
+  ":x:": "✘"
+  ":sparkles:": "✨"
+  ":money:": "💰"
+
+jokes:
+  min-length: 5
+  max-length: 180
+  defaults:
+    - "Why did the creeper apply for staff? It wanted explosive permissions."
+    - "I tried to mine bedrock once. It was a hard no."
