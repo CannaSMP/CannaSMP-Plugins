@@ -55,6 +55,9 @@ public final class WebsiteExportService implements AutoCloseable {
             compact.put("rank", player.get("rank"));
             compact.put("world", player.get("world"));
             compact.put("afk", player.get("afk"));
+            compact.put("balance", player.get("balance"));
+            compact.put("playtimeSeconds", player.get("playtimeSeconds"));
+            compact.put("level", player.get("level"));
             return compact;
         }).toList());
         publicSnapshot.put("integrations", snapshot.integrations());
