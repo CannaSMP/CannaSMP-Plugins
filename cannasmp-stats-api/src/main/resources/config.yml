@@ -1,0 +1,67 @@
+# CannaSMP Stats API
+# Exposes read-only JSON server stats for the Discord bot and website.
+
+server:
+  # LiteByte extra allocation should point to this port.
+  port: 25886
+
+  # For LiteByte/public access use 0.0.0.0.
+  # For local-only testing use 127.0.0.1.
+  bind-host: "0.0.0.0"
+
+  # Public server hostname shown in API responses.
+  public-host: "cannasmp.smpserver.net"
+
+  # Number of HTTP worker threads. Keep this small.
+  worker-threads: 4
+
+security:
+  # Leave public endpoints open, but protect player details/leaderboards by default.
+  # Requests can authenticate with Authorization: Bearer <key> or X-API-Key: <key>.
+  api-key: "CHANGE_ME_TO_A_LONG_RANDOM_SECRET"
+
+  public-endpoints:
+    - "/health"
+    - "/api/v1/status"
+    - "/api/v1/meta"
+
+  # Protect all endpoints except public-endpoints.
+  require-auth-by-default: true
+
+cors:
+  enabled: true
+  # Add your GitHub Pages domain here.
+  allowed-origins:
+    - "https://cannasmp.github.io"
+  allowed-methods:
+    - "GET"
+    - "OPTIONS"
+
+rate-limit:
+  enabled: true
+  # Simple per-IP token bucket.
+  requests-per-minute: 120
+
+stats:
+  # Snapshot cache interval. API reads use this cached snapshot.
+  refresh-seconds: 5
+
+  # If false, /players returns counts only unless authenticated.
+  public-player-list: false
+
+  # Include per-player UUID/world/ping only when endpoint is authenticated.
+  expose-player-details: true
+
+  # Leaderboards are built from online players and known offline-player stats.
+  leaderboard-size: 10
+
+optional-data:
+  vault-economy: true
+  luckperms-groups: true
+  shards:
+    enabled: true
+    # Optional local shard data file. The plugin fails gracefully if missing.
+    # Expected simple YAML shape:
+    # players:
+    #   <uuid>: 123
+    file: "plugins/CannaSMPShardsPlaceholder/shards.yml"

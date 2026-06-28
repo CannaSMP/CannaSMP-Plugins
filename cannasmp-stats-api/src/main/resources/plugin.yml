@@ -1,0 +1,19 @@
+name: CannaSMPStatsAPI
+version: 1.0.0
+main: net.cannasmp.statsapi.CannaSMPStatsApiPlugin
+api-version: '26.1.2'
+author: CannaSMP
+description: Read-only HTTP JSON API for live CannaSMP server statistics.
+softdepend:
+  - PlaceholderAPI
+  - Vault
+  - LuckPerms
+commands:
+  statsapi:
+    description: Manage the CannaSMP stats API.
+    usage: /statsapi <reload|status|key>
+    permission: cannasmp.statsapi.admin
+permissions:
+  cannasmp.statsapi.admin:
+    description: Allows reloading and inspecting the stats API plugin.
+    default: op

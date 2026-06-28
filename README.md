@@ -17,6 +17,7 @@ This repository contains the source for server-specific plugins and patched cust
 | `cannasmp-rank-command` | Staff rank helper commands using LuckPerms-style permission assignment. |
 | `cannasmp-shard-leaderboard` | AFK shard leaderboard support. |
 | `cannasmp-shards-placeholder` | PlaceholderAPI expansion for AFK shards. |
+| `cannasmp-stats-api` | Embedded read-only HTTP JSON API for Discord bot and website server stats. |
 | `cannasmp-tools` | Emoji replacement, joke system, chat/command filter, clear chat, and server utility commands. |
 
 ## Notes
