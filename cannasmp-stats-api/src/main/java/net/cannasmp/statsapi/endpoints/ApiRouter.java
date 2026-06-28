@@ -28,6 +28,7 @@ public final class ApiRouter {
             case "/health", "/api/v1/health" -> ok(Map.of("ok", true, "plugin", plugin.getDescription().getVersion()));
             case "/api/v1/version" -> ok(version());
             case "/api/v1/status" -> ok(snapshot.status());
+            case "/api/v1/public", "/api/v1/website" -> ok(snapshot.publicWebsiteSnapshot());
             case "/api/v1/server" -> ok(Map.of("server", snapshot.server()));
             case "/api/v1/system" -> ok(Map.of("system", snapshot.system()));
             case "/api/v1/players" -> ok(snapshot.players(authenticated || config.publicPlayerList(), authenticated && config.exposePlayerDetails()));

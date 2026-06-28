@@ -17,6 +17,8 @@ security:
     - "/api/v1/health"
     - "/api/v1/status"
     - "/api/v1/version"
+    - "/api/v1/public"
+    - "/api/v1/website"
   ip-whitelist:
     enabled: false
     allowed:

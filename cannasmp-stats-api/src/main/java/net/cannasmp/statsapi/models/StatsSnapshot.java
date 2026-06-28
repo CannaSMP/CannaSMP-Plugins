@@ -38,6 +38,29 @@ public record StatsSnapshot(
         return map;
     }
 
+    public Map<String, Object> publicWebsiteSnapshot() {
+        Map<String, Object> map = new LinkedHashMap<>();
+        map.put("ok", true);
+        map.put("snapshotTime", createdAt.toString());
+        map.put("server", server);
+        map.put("system", system);
+        map.put("players", players.stream().map(player -> {
+            Map<String, Object> compact = new LinkedHashMap<>();
+            compact.put("username", player.get("username"));
+            compact.put("uuid", player.get("uuid"));
+            compact.put("ping", player.get("ping"));
+            compact.put("rank", player.get("rank"));
+            compact.put("world", player.get("world"));
+            compact.put("afk", player.get("afk"));
+            compact.put("balance", player.get("balance"));
+            compact.put("playtimeSeconds", player.get("playtimeSeconds"));
+            compact.put("level", player.get("level"));
+            return compact;
+        }).toList());
+        map.put("integrations", integrations);
+        return map;
+    }
+
     public Map<String, Object> status() {
         Map<String, Object> map = new LinkedHashMap<>();
         map.put("ok", true);
